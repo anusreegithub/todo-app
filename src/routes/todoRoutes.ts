@@ -1,14 +1,12 @@
 import express from 'express';
-import { TodoManager } from '../models/TodoManager';
+import { TodoManager } from '../controller.ts/todoController';
 
 const router = express.Router();
 const todoManager = new TodoManager();
 
 router.get('/', (req, res) => {
-
     const allTodos = todoManager.getTodos();
     const completedTodos = allTodos.filter(todo => todo.completed);
-    console.log("completedTodos", completedTodos);
     const incompleteTodos = allTodos.filter(todo => !todo.completed);     
     res.render('index', {todos:allTodos, completedTodos, incompleteTodos});
 });

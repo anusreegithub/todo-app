@@ -1,4 +1,4 @@
-import {Todo, priorityTodo} from './Todo';
+import {Todo, priorityTodo} from '../models/Todo';
 
 export class TodoManager  {
     getTodoById(id: number) {
