@@ -56,7 +56,7 @@ npm run build
 
 ### 4️⃣ Start the Application
 ```sh
-npm start
+npm run dev
 ```
 
 ### 5️⃣ Open in Browser
